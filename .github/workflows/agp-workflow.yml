@@ -105,5 +105,6 @@ jobs:
           repo_id: ${{ inputs.repo_id || '' }}
           vulnerabilities: ${{ inputs.vulnerabilities }}
           verbose: ${{ inputs.verbose || 'false' }}
+          npmrc-content: "registry=https://registry.npmjs.org"
         env:
           AGP_API_URL: ${{ vars.AGP_API_URL }}
