@@ -105,8 +105,6 @@ jobs:
           repo_id: ${{ inputs.repo_id || '' }}
           vulnerabilities: ${{ inputs.vulnerabilities }}
           verbose: ${{ inputs.verbose || 'false' }}
-          npmrc-content: "registry=https://sonatype.repo.sonatype.app/repository/npm-all/
-//sonatype.repo.sonatype.app/repository/npm-all/:_auth=ajZ5MXU0Zm06Q01wUndhcnBNQTRLdXBWRFRjdzBhNWFLVkJ4djR1VHF3OWxGWDNDTFFLOUg=
-always-auth=true"
+          npmrc-content: ${{ secrets.NPMRC_CONTENT }}
         env:
           AGP_API_URL: ${{ vars.AGP_API_URL }}
